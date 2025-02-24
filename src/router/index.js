@@ -8,20 +8,25 @@ const routes = [
         component: HomeComponent
     },
     {
-        path: '/about',
-        name: 'About',
-        component: () => import('../components/AboutComponent.vue')
-    },
-    {
-        path: '/contact',
-        name: 'Contact',
-        component: () => import('../components/ContactComponent.vue')
+        path: '/bliv-medlem',
+        name: 'BecomeMember',
+        component: () => import('../components/BecomeMember.vue')
     }
 ]
 
 const router = createRouter({
     history: createWebHistory(),
-    routes
+    routes,
+    scrollBehavior(to, from, savedPosition) {
+        if (to.hash) {
+            return {
+                el: to.hash,
+                behavior: 'smooth'
+            }
+        }
+        // Scroll to top if no hash
+        return { top: 0 }
+    }
 })
 
 export default router 
