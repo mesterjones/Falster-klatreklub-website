@@ -11,6 +11,16 @@ const routes = [
         path: '/bliv-medlem',
         name: 'BecomeMember',
         component: () => import('../components/BecomeMember.vue')
+    },
+    {
+        path: '/bestyrelse',
+        name: 'Bestyrelse',
+        component: () => import('../components/Bestyrelse.vue')
+    },
+    {
+        path: '/billeder',
+        name: 'Gallery',
+        component: () => import('../components/Gallery.vue')
     }
 ]
 

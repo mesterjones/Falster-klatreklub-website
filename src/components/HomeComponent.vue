@@ -24,22 +24,22 @@
             </v-row>
             <v-row justify="center" class="mt-8" style="max-width: 1000px; margin: 0 auto;">
                 <v-col cols="12" md="5">
-                    <v-card class="mx-auto pa-4" width="400" elevation="0" style="background-color: grey;" rounded="lg">
+                    <v-card class="mx-auto pa-4" width="400" elevation="0" style="background: linear-gradient(135deg, #f0fff4, #d4edda);;" rounded="lg">
                         <div class="text-center">
-                            <h2 class="mb-4" style="color: white; font-weight: bold;">Træningstider</h2>
+                            <h2 class="mb-4" style="color: black; font-weight: bold;">Træningstider</h2>
                             <v-list density="compact" class="bg-transparent pa-0">
                                 <v-list-item>
-                                    <v-list-item-title style="color: white; font-weight: bold;">
+                                    <v-list-item-title style="color: black; font-weight: bold;">
                                         Tirsdag: 17-21 (familieklatring 17-19)
                                     </v-list-item-title>
                                 </v-list-item>
                                 <v-list-item>
-                                    <v-list-item-title style="color: white; font-weight: bold;">
+                                    <v-list-item-title style="color: black; font-weight: bold;">
                                         Torsdag: 18-21
                                     </v-list-item-title>
                                 </v-list-item>
                                 <v-list-item>
-                                    <v-list-item-title style="color: white; font-weight: bold;">
+                                    <v-list-item-title style="color: black; font-weight: bold;">
                                         Søndag: 10-14
                                     </v-list-item-title>
                                 </v-list-item>
@@ -56,7 +56,7 @@
                             elevation="0" 
                             rounded="lg" 
                             v-bind="props"
-                            style="cursor: pointer; background-color: grey;"
+                            style="cursor: pointer; background: linear-gradient(135deg, #f0fff4, #d4edda);"
                         >
                             <a 
                                 href="https://www.google.com/maps/place/Industrivej+10,+4800+Nyk%C3%B8bing+Falster/@54.764444,11.864444,17z" 
@@ -65,13 +65,13 @@
                                 class="text-decoration-none card-link"
                             >
                                 <div class="text-center">
-                                    <h2 class="text-color-fcfaf1 mb-4" style="color: white; font-weight: bold;">Find os her</h2>
+                                    <h2 class="text-color-fcfaf1 mb-4" style="color: black; font-weight: bold;">Find os her</h2>
                                     <v-list density="compact" bg-color="transparent" class="pa-0 mx-auto" width="fit-content">
                                         <v-list-item v-for="(item, i) in contactInfo" :key="i">
                                             <template v-slot:prepend>
-                                                <v-icon :icon="item.icon" color="white" size="small"></v-icon>
+                                                <v-icon :icon="item.icon" color="black" size="small"></v-icon>
                                             </template>
-                                            <v-list-item-title class="text-color-fcfaf1 ms-2" style="color: white; font-weight: bold;">
+                                            <v-list-item-title class="text-color-fcfaf1 ms-2" style="color: black; font-weight: bold;">
                                                 {{ item.text }}
                                             </v-list-item-title>
                                         </v-list-item>
@@ -89,7 +89,7 @@
         <section id="about">
             <v-divider class="my-8"></v-divider>
             <v-row>
-                <v-col cols="12" md="6" class="mx-auto">
+                <v-col cols="12" md="6" class="mx-auto px-6">
                     <div class="text-grey-darken-1 text-h5 font-weight-medium mb-4 text-center" style="color: black;">
                         OM OS
                     </div>
@@ -109,15 +109,15 @@
                         Det er gratis at besøge klubben og prøve klatringen af et par gange, og skulle man blive glad for det, så er medlemsskabet billigt. 
                         500 for et årligt medlemskab og har man familiemedlemmer koster hvert ekstra familiemedlem i samme husstand 100 DKK om året. <br><br>
 
-                        Lyder det som noget for dig, eller har du spørgsmål så kan vi kontaktes via formularen herunder. Du kan også besøge os på Facebook lige her
+                        Lyder det som noget for dig, eller har du spørgsmål så kan vi kontaktes via formularen herunder. Du kan også besøge os på Facebook lige her: <a href="https://www.facebook.com/falsterklatreklub" target="_blank" rel="noopener noreferrer"><v-icon icon="mdi-facebook" color="blue"></v-icon></a>
                     </p>
 
                     <v-row>
-                        <v-col cols="6">
-                        <v-img class="pt-20" src="bouldering1.jpg" aspect-ratio="1.5" contain></v-img>
-                        </v-col>
-                        <v-col cols="6">
-                        <v-img class="pt-20" src="bouldering1.jpg" aspect-ratio="1.5" contain></v-img>
+                            <v-col cols="6" class="mx-auto">
+                            <v-img class="pt-6" src="bouldering1.jpg" aspect-ratio="1.5" contain></v-img>
+                            </v-col>
+                            <v-col cols="6" class="mx-auto">
+                            <v-img class="pt-6" src="bouldering1.jpg" aspect-ratio="1.5" contain></v-img>
                         </v-col>
                     </v-row>
                 </v-col>
@@ -128,12 +128,12 @@
         <section id="contact">
             <v-divider class="my-8"></v-divider>
             <v-row>
-                <v-col>
+                <v-col cols="12" md="6"  class="mx-auto">
                     <v-card
                         class="pa-6 rounded-lg"
                         elevation="1"
-                        style="background-color: white;"
-                    >
+                        style="background-color: white"
+                    > 
                         <div class="text-grey-darken-1 text-h5 font-weight-medium mb-4 text-center" style="color: black;">
                             KONTAKT OS
                         </div>
@@ -278,13 +278,15 @@ const contactInfo = [
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap');
 
 .home-container {
-    min-height: 100vh;
+    min-height: 80vh;
     min-width: 100vw;
     font-family: 'Open Sans', sans-serif;
     background-color: white;
+    margin-bottom: 10px;
 }
 
 .about-container {
+    margin-top: 10px;
     padding: 20px 0;
     background-color: white;
 }
@@ -343,7 +345,7 @@ h2 {
 }
 
 .v-card {
-    margin-bottom: 16px;
+    margin-bottom: 5px;
     background-color: white;
 }
 

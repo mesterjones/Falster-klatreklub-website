@@ -8,6 +8,8 @@
       <v-spacer></v-spacer>
       <v-btn variant="text" class="primary-text" :to="{ name: 'Home', hash: '#about' }">Om os</v-btn>
       <v-btn variant="text" class="primary-text" :to="{ name: 'BecomeMember' }">Bliv medlem</v-btn>
+      <v-btn variant="text" class="primary-text" :to="{ name: 'Bestyrelse' }">Bestyrelse</v-btn>
+      <v-btn variant="text" class="primary-text" :to="{ name: 'Gallery' }">Billeder</v-btn>
     </v-app-bar>
   </template>
   

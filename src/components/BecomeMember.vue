@@ -3,7 +3,7 @@
         <section id="contact">
             <v-divider class="my-8"></v-divider>
             <v-row>
-                <v-col>
+                <v-col cols="12" md="6">
                     <v-card
                         class="pa-6 rounded-lg"
                         elevation="1"
@@ -13,7 +13,8 @@
                             BLIV MEDLEM
                         </div>
                         <h2 class="text-h6 font-weight-regular mb-6 text-grey-darken-2 text-center" style="color: grey;">
-                            For indmeldelse, skriv til os her. Så vender vi hurtigt tilbage.
+                            Er du interessseret i at blive medlem af Falster Klatreklub, eller har du andre spørgsmål, 
+                            så kan du kontakte os her. Så vender vi hurtigst muligt tilbage. 
                         </h2>
                         
                         <v-form ref="contactForm" @submit.prevent="submitForm" class="mt-4">
