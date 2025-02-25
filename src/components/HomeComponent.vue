@@ -176,17 +176,19 @@
                                     ></v-textarea>
                                 </v-col>
                                 <v-col cols="12">
-                                    <v-btn
+                                    <div align="center">
+                                        <v-btn
                                     :loading="loading"
                                     color="black"
                                     size="large"
                                     type="submit"
                                     variant="flat"
-                                    class="px-6"
+                                    class="px-4"
                                     aria-label="Send besked"
                                     >
                                     Send besked
                                     </v-btn>
+                                    </div>
                                 </v-col>
                             </v-row>
                         </v-form>

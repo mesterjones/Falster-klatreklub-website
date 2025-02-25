@@ -9,10 +9,12 @@
                 md="4"
             >
                 <v-card>
-                    <v-img
-                        :src="'https://via.placeholder.com/150?text=Image+' + n"
-                        aspect-ratio="1"
-                    ></v-img>
+                    <v-icon
+                        large
+                        class="mx-auto my-4"
+                    >
+                        mdi-image
+                    </v-icon>
                 </v-card>
             </v-col>
         </v-row>
