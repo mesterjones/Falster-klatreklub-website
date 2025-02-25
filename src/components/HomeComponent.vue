@@ -114,10 +114,10 @@
 
                     <v-row>
                             <v-col cols="6" class="mx-auto">
-                            <v-img class="pt-6" src="bouldering1.jpg" aspect-ratio="1.5" contain></v-img>
+                            <v-img class="pt-6" src="bouldering1.jpg" aspect-ratio="1.5" contain alt="Bouldering activity at Falster Klatreklub"></v-img>
                             </v-col>
                             <v-col cols="6" class="mx-auto">
-                            <v-img class="pt-6" src="bouldering1.jpg" aspect-ratio="1.5" contain></v-img>
+                            <v-img class="pt-6" src="bouldering1.jpg" aspect-ratio="1.5" contain alt="Bouldering activity at Falster Klatreklub"></v-img>
                         </v-col>
                     </v-row>
                 </v-col>
