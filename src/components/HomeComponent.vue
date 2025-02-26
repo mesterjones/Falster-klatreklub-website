@@ -25,11 +25,11 @@
             </v-row>
             <v-row justify="center" class="mt-8" style="max-width: 1000px; margin: 0 auto;">
                 <v-col cols="12" md="5">
-                    <v-card class="mx-auto pa-4 info-card" width="400" elevation="0" style="background: linear-gradient(135deg, #f0fff4, #d4edda);" rounded="lg">
+                    <v-card class="mx-auto pa-3 info-card" width="400" elevation="0" style="background: linear-gradient(135deg, #f0fff4, #d4edda);" rounded="lg">
                         <div class="text-center h-100 d-flex flex-column">
-                            <h2 class="mb-4" style="color: black; font-weight: bold;">Klatretider</h2>
+                            <h2 class="mb-3" style="color: black; font-weight: bold; font-size: 1.4rem;">Klatretider</h2>
                             <div class="climbing-schedule flex-grow-1">
-                                <div class="time-slot mb-4">
+                                <div class="time-slot mb-2">
                                     <h3 class="day-header">Tirsdage</h3>
                                     <div class="time-detail">
                                         <p>17-19: Hyggelig familieklatring for børn og forældre</p>
@@ -37,14 +37,14 @@
                                     </div>
                                 </div>
                                 
-                                <div class="time-slot mb-4">
+                                <div class="time-slot mb-2">
                                     <h3 class="day-header">Torsdage</h3>
                                     <div class="time-detail">
                                         <p>18-21: Klatring for alle</p>
                                     </div>
                                 </div>
                                 
-                                <div class="time-slot mb-4">
+                                <div class="time-slot">
                                     <h3 class="day-header">Søndage</h3>
                                     <div class="time-detail">
                                         <p>10-14: Klatring for alle</p>
@@ -380,7 +380,7 @@ h2 {
 
 .climbing-schedule {
     text-align: left;
-    padding: 0 16px;
+    padding: 0 8px;
 }
 
 .time-slot {
@@ -390,29 +390,30 @@ h2 {
 .day-header {
     color: black;
     font-weight: bold;
-    font-size: 1.1rem;
-    margin-bottom: 4px;
+    font-size: 1rem;
+    margin-bottom: 2px;
 }
 
 .time-detail {
-    padding-left: 16px;
+    padding-left: 8px;
 }
 
 .time-detail p {
     color: black;
-    margin: 4px 0;
+    margin: 2px 0;
     font-weight: normal;
+    font-size: 0.9rem;
 }
 
 .info-card {
-    height: 300px; /* Adjust this value as needed */
+    height: 250px;
     display: flex;
     flex-direction: column;
 }
 
 .climbing-schedule {
     text-align: left;
-    padding: 0 16px;
+    padding: 0 8px;
     height: 100%;
 }
 </style>
