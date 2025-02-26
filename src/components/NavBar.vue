@@ -4,7 +4,7 @@
       color="white"
       class="px-4"
     >
-      <v-app-bar-title class="primary-text" @click="navigateToHome">FALSTER KLATREKLUB</v-app-bar-title>
+      <v-app-bar-title class="primary-text cursor-pointer hover:text-grey" @click="navigateToHome">FALSTER KLATREKLUB</v-app-bar-title>
       
       <!-- Show buttons on desktop -->
       <div class="d-none d-sm-flex">

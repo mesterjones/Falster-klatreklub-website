@@ -99,8 +99,8 @@
         <section id="about">
             <v-divider class="my-8"></v-divider>
             <v-row>
-                <v-col cols="12" md="6" class="mx-auto px-6">
-                    <div class="text-grey-darken-1 text-h5 font-weight-medium mb-4 text-center" style="color: black;">
+                <v-col cols="12" md="10" lg="8"  class="mx-auto px-6">
+                    <div class="text-h5 font-weight-medium mb-4 text-center" style="color: black;">
                         OM OS
                     </div>
                     <p class="text-grey-darken-2 text-body-1" style="color: grey;">
@@ -212,7 +212,7 @@
                             type="success"
                             variant="tonal"
                             class="mt-4"
-                            style="background-color: grey; color: white;"
+                            style="background-color: white; color: white;"
                         >
                             Tak for din besked! Vi vender tilbage hurtigst muligt.
                         </v-alert>
@@ -245,7 +245,7 @@ const formData = ref({
 const loading = ref(false);
 const success = ref(false);
 const error = ref(false);
-const formspreeUrl = ref("https://formspree.io/f/mnnjoeaz");
+const formspreeUrl = ref("https://formspree.io/f/movjozqr");
 
 const scrollToSection = (sectionId) => {
   const element = document.getElementById(sectionId);

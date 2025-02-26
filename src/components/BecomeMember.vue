@@ -72,7 +72,7 @@
                             type="success"
                             variant="tonal"
                             class="mt-4"
-                            style="background-color: grey; color: white;"
+                            style="background-color: white; color: white;"
                         >
                             Tak for din besked! 
                         </v-alert>
@@ -82,7 +82,7 @@
                             type="error"
                             variant="tonal"
                             class="mt-4"
-                            style="background-color: grey; color: white;"
+                            style="background-color: white; color: white;"
                         >
                             Der opstod en fejl. Prøv venligst igen.
                         </v-alert>
@@ -104,7 +104,7 @@ const formData = ref({
 const loading = ref(false);
 const success = ref(false);
 const error = ref(false);
-const formspreeUrl = ref("https://formspree.io/f/mnnjoeaz");
+const formspreeUrl = ref("https://formspree.io/f/movjozqr");
 
 const submitForm = async () => {
   loading.value = true;
