@@ -4,7 +4,7 @@
             <v-row>
                 <v-col
                     class="d-flex align-center justify-center"
-                    style="background: url('/bouldering1.webp') center/cover no-repeat; height:50vh; background-color: grey;"
+                    style="background: url('/bouldering1.webp') center/cover no-repeat; height: 70vh; background-color: grey;"
                     >
                     <v-card class="mx-auto pa-6" width="800" elevation="0" style="background-color: white;">
                         <div class="text-center" >
@@ -27,7 +27,7 @@
                 <v-col cols="12" md="5">
                     <v-card class="mx-auto pa-3 info-card" width="400" elevation="0" style="background: linear-gradient(135deg, #f0fff4, #d4edda);" rounded="lg">
                         <div class="text-center h-100 d-flex flex-column">
-                            <h2 class="mb-3" style="color: black; font-weight: bold; font-size: 1.4rem;">Klatretider</h2>
+                            <h2 class="mb-4" style="color: black; font-weight: bold;">Klatretider</h2>
                             <div class="climbing-schedule flex-grow-1">
                                 <div class="time-slot mb-2">
                                     <h3 class="day-header">Tirsdage</h3>
@@ -72,9 +72,10 @@
                                 class="text-decoration-none card-link"
                             >
                                 <div class="text-center">
-                                    <h2 class="text-color-fcfaf1 mb-4" style="color: black; font-weight: bold;">Find os her</h2>
-                                    <v-list density="compact" bg-color="transparent" class="pa-0 mx-auto" width="fit-content">
-                                        <v-list-item v-for="(item, i) in contactInfo" :key="i">
+                                    <h2 class="mb-4" style="color: black; font-weight: bold;">Find os her</h2>
+                                    <div class="d-flex justify-center">
+                                        <v-list density="compact" bg-color="transparent" class="pa-0 mx-auto" width="fit-content">
+                                            <v-list-item v-for="(item, i) in contactInfo" :key="i">
                                             <template v-slot:prepend>
                                                 <v-icon :icon="item.icon" color="black" size="small"></v-icon>
                                             </template>
@@ -82,7 +83,9 @@
                                                 {{ item.text }}
                                             </v-list-item-title>
                                         </v-list-item>
-                                    </v-list>
+                                        </v-list>
+                                    </div>
+
                                 </div>
                             </a>
                         </v-card>
@@ -406,7 +409,7 @@ h2 {
 }
 
 .info-card {
-    height: 250px;
+    height: 260px;
     display: flex;
     flex-direction: column;
 }
