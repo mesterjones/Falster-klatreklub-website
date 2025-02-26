@@ -2,10 +2,10 @@
     <v-container>
         <section id="contact">
             <v-divider class="my-8"></v-divider>
-            <v-row>
-                <v-col cols="12" md="6">
+            <v-row justify="center">
+                <v-col cols="12" md="10" lg="8">
                     <v-card
-                        class="pa-6 rounded-lg"
+                        class="pa-6 rounded-lg mx-auto"
                         elevation="1"
                         style="background-color: white;"
                     >
@@ -51,7 +51,7 @@
                                     required
                                     ></v-textarea>
                                 </v-col>
-                                <v-col cols="12">
+                                <v-col cols="12" class="d-flex justify-center">
                                     <v-btn
                                     :loading="loading"
                                     color="black"

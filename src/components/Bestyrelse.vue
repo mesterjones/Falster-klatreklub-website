@@ -8,13 +8,12 @@
                         <v-row>
                             <v-col cols="auto">
                                 <v-avatar size="100">
-                                    <v-icon large class="mx-auto my-4"> mdi-image</v-icon>
+                                    <v-img src="profile-default.webp" class="mx-auto my-4"></v-img>
                                 </v-avatar>
                             </v-col>
                             <v-col>
                                 <p>Hjalte Hundevadt</p>
-                                <p>Telefon: 11111111</p>
-                                <p>Email: hjalte@falsterklatreklub.dk</p>
+                                <p>Telefon: 31981742</p>
                             </v-col>
                         </v-row>
                     </v-card-text>
@@ -29,13 +28,11 @@
                         <v-row>
                             <v-col cols="auto">
                                 <v-avatar size="100">
-                                    <v-icon large class="mx-auto my-4"> mdi-image</v-icon>
+                                    <v-img src="profile-default.webp" class="mx-auto my-4"></v-img>
                                 </v-avatar>
                             </v-col>
                             <v-col>
-                                <p>Flemming</p>
-                                <p>Telefon: 11111111</p>
-                                <p>Email: flemming@falsterklatreklub.dk</p>
+                                <p>Flemming Rasmussen</p>
                             </v-col>
                         </v-row>
                     </v-card-text>

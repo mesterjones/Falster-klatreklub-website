@@ -2,20 +2,11 @@
     <v-container>
         <v-row>
             <v-col
-                v-for="n in 9"
-                :key="n"
                 cols="12"
-                sm="4"
-                md="4"
+                md="6"
+                class="mx-auto"
             >
-                <v-card>
-                    <v-icon
-                        large
-                        class="mx-auto my-4"
-                    >
-                        mdi-image
-                    </v-icon>
-                </v-card>
+                <h1>Kommer snart!</h1>
             </v-col>
         </v-row>
     </v-container>

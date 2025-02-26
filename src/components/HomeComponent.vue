@@ -4,7 +4,7 @@
             <v-row>
                 <v-col
                     class="d-flex align-center justify-center"
-                    style="background: url('/bouldering1.jpg') center/cover no-repeat; height:50vh; background-color: grey;"
+                    style="background: url('/bouldering1.webp') center/cover no-repeat; height:50vh; background-color: grey;"
                     >
                     <v-card class="mx-auto pa-6" width="800" elevation="0" style="background-color: white;">
                         <div class="text-center" >
@@ -16,6 +16,7 @@
                         </p>
                         <v-btn 
                         color="black"
+                        @click="$router.push({ name: 'BecomeMember' })"
                         class="primary-text mt-4"
                         aria-label="Bliv medlem">Bliv medlem</v-btn>
                         </div>
@@ -24,33 +25,39 @@
             </v-row>
             <v-row justify="center" class="mt-8" style="max-width: 1000px; margin: 0 auto;">
                 <v-col cols="12" md="5">
-                    <v-card class="mx-auto pa-4" width="400" elevation="0" style="background: linear-gradient(135deg, #f0fff4, #d4edda);;" rounded="lg">
-                        <div class="text-center">
-                            <h2 class="mb-4" style="color: black; font-weight: bold;">Træningstider</h2>
-                            <v-list density="compact" class="bg-transparent pa-0">
-                                <v-list-item>
-                                    <v-list-item-title style="color: black; font-weight: bold;">
-                                        Tirsdag: 17-21 (familieklatring 17-19)
-                                    </v-list-item-title>
-                                </v-list-item>
-                                <v-list-item>
-                                    <v-list-item-title style="color: black; font-weight: bold;">
-                                        Torsdag: 18-21
-                                    </v-list-item-title>
-                                </v-list-item>
-                                <v-list-item>
-                                    <v-list-item-title style="color: black; font-weight: bold;">
-                                        Søndag: 10-14
-                                    </v-list-item-title>
-                                </v-list-item>
-                            </v-list>
+                    <v-card class="mx-auto pa-4 info-card" width="400" elevation="0" style="background: linear-gradient(135deg, #f0fff4, #d4edda);" rounded="lg">
+                        <div class="text-center h-100 d-flex flex-column">
+                            <h2 class="mb-4" style="color: black; font-weight: bold;">Klatretider</h2>
+                            <div class="climbing-schedule flex-grow-1">
+                                <div class="time-slot mb-4">
+                                    <h3 class="day-header">Tirsdage</h3>
+                                    <div class="time-detail">
+                                        <p>17-19: Hyggelig familieklatring for børn og forældre</p>
+                                        <p>18-21: Klatring for alle</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="time-slot mb-4">
+                                    <h3 class="day-header">Torsdage</h3>
+                                    <div class="time-detail">
+                                        <p>18-21: Klatring for alle</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="time-slot mb-4">
+                                    <h3 class="day-header">Søndage</h3>
+                                    <div class="time-detail">
+                                        <p>10-14: Klatring for alle</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </v-card>
                 </v-col>
                 <v-col cols="12" md="5">
                     <v-hover v-slot="{ isHovering, props }">
                         <v-card 
-                            class="mx-auto pa-4 position-relative transition-transform" 
+                            class="mx-auto pa-4 position-relative transition-transform info-card" 
                             :class="{ 'scale-card': isHovering }"
                             width="400" 
                             elevation="0" 
@@ -93,14 +100,14 @@
                     <div class="text-grey-darken-1 text-h5 font-weight-medium mb-4 text-center" style="color: black;">
                         OM OS
                     </div>
-                    <p class="text-grey-darken-2 text-body-1 text-center" style="color: grey;">
+                    <p class="text-grey-darken-2 text-body-1" style="color: grey;">
                         Falster Klatreklub er en hyggelig lille forening med gode faciliteter og en åben atmosfære. 
                         Her er mulighed for, at lære om klatring, teknikker og udstyr, samt en anderledes måde, at bruge kroppen på og komme i form. 
                         Vores primære fokus er på klatredisciplinen bouldering, teknisk klatring i lav højde, men vi har også en 8m rebvæg hvor man 
                         kan lære om rebklatring og sikringsteknikker. Aftener i klubben er præget af godt samvær om klatring i fællesskab, sparring og udfordringer, 
                         samt kaffe og hygge. <br><br>
 
-                        Som medlem er der fri adgang til klubben alle ugens dagen. Derudover er der træning 3 gang om ugen. <br><br>
+                        <strong>Som medlem er der fri adgang til klubben alle ugens dagen. Derudover er der træning 3 gang om ugen.</strong> <br><br>
 
                         Foreningen vægter medlemsinddragelse højt og derfor er der rig mulighed for at være med til, at forme hvad der skal ske i klubben. <br><br>
 
@@ -113,12 +120,16 @@
                     </p>
 
                     <v-row>
-                            <v-col cols="6" class="mx-auto">
-                            <v-img class="pt-6" src="bouldering1.jpg" aspect-ratio="1.5" contain alt="Bouldering activity at Falster Klatreklub"></v-img>
+                            <v-col cols="12" md="6"class="mx-auto">
+                                <v-img 
+                                    class="pt-6" 
+                                    src="boulderinggreb.webp" 
+                                    aspect-ratio="1.2"
+                                    width="500"
+                                    contain 
+                                    alt="Boulderinggreb"
+                                ></v-img>
                             </v-col>
-                            <v-col cols="6" class="mx-auto">
-                            <v-img class="pt-6" src="bouldering1.jpg" aspect-ratio="1.5" contain alt="Bouldering activity at Falster Klatreklub"></v-img>
-                        </v-col>
                     </v-row>
                 </v-col>
             </v-row>
@@ -128,13 +139,13 @@
         <section id="contact">
             <v-divider class="my-8"></v-divider>
             <v-row>
-                <v-col cols="12" md="6"  class="mx-auto">
+                <v-col cols="12" md="10" lg="8"  class="mx-auto">
                     <v-card
                         class="pa-6 rounded-lg"
                         elevation="1"
                         style="background-color: white"
                     > 
-                        <div class="text-grey-darken-1 text-h5 font-weight-medium mb-4 text-center" style="color: black;">
+                        <div class="text-h5 font-weight-medium mb-4 text-center" style="color: black;">
                             KONTAKT OS
                         </div>
                         <h2 class="text-h6 font-weight-regular mb-6 text-grey-darken-2 text-center" style="color: grey;">
@@ -270,7 +281,7 @@ const submitForm = async () => {
 
 const contactInfo = [
     { icon: 'mdi-home', text: 'Falster Klatreklub' },
-    { icon: 'mdi-map-marker', text: 'Industrivej 10' },
+    { icon: 'mdi-map-marker', text: 'Kulturfabrikken - Industrivej 10' },
     { icon: 'mdi-city', text: '4800 Nykøbing F' }
 ];
 
@@ -365,5 +376,43 @@ h2 {
 
 .transition-transform {
     transition: all 0.3s ease;
+}
+
+.climbing-schedule {
+    text-align: left;
+    padding: 0 16px;
+}
+
+.time-slot {
+    margin-bottom: 16px;
+}
+
+.day-header {
+    color: black;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+}
+
+.time-detail {
+    padding-left: 16px;
+}
+
+.time-detail p {
+    color: black;
+    margin: 4px 0;
+    font-weight: normal;
+}
+
+.info-card {
+    height: 300px; /* Adjust this value as needed */
+    display: flex;
+    flex-direction: column;
+}
+
+.climbing-schedule {
+    text-align: left;
+    padding: 0 16px;
+    height: 100%;
 }
 </style>
