@@ -126,7 +126,7 @@
                         Det er gratis at besøge klubben og prøve klatringen af et par gange, og skulle man blive glad for det, så er medlemsskabet billigt. 
                         500 for et årligt medlemskab og har man familiemedlemmer koster hvert ekstra familiemedlem i samme husstand 100 DKK om året. <br><br>
 
-                        Lyder det som noget for dig, eller har du spørgsmål så kan vi kontaktes via formularen herunder. Du kan også besøge os på Facebook lige her: <a href="https://www.facebook.com/falsterklatreklub" target="_blank" rel="noopener noreferrer"><v-icon icon="mdi-facebook" color="blue"></v-icon></a>
+                        Lyder det som noget for dig, eller har du spørgsmål så kan vi kontaktes via formularen herunder. Du kan også besøge os på Facebook lige her: <a href="https://www.facebook.com/Falsterklatre" target="_blank" rel="noopener noreferrer"><v-icon icon="mdi-facebook" color="blue"></v-icon></a>
                     </p>
 
                     <v-row>
