@@ -80,7 +80,10 @@
                                             <template v-slot:prepend>
                                                 <v-icon :icon="item.icon" color="black" size="small"></v-icon>
                                             </template>
-                                            <v-list-item-title class="text-color-fcfaf1 ms-2" style="color: black; font-weight: bold;">
+                                            <v-list-item-title 
+                                                class="text-color-fcfaf1 ms-2" 
+                                                style="color: black; font-weight: bold; white-space: normal; word-wrap: break-word;"
+                                            >
                                                 {{ item.text }}
                                             </v-list-item-title>
                                         </v-list-item>
