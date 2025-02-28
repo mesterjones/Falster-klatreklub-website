@@ -3,8 +3,11 @@
         <section id="home">
             <v-row>
                 <v-col
-                    class="d-flex align-center justify-center"
-                    style="background: url('/bouldering1.webp') center/cover no-repeat; height: 70vh; background-color: grey;"
+                    class="d-flex align-center justify-center hero-background"
+                    :style="{
+                        'background-color': 'grey',
+                        'height': '70vh'
+                    }"
                     >
                     <v-card class="mx-auto pa-6" width="800" max-width="95%" elevation="0" style="background-color: white;">
                         <div class="text-center" >
@@ -443,8 +446,8 @@ h2 {
 }
 
 @media (max-width: 600px) {
-    .hero-section {
-        height: 50vh;
+    .hero-background {
+        background-image: url('/bouldering1small.jpg');
     }
     
     .responsive-title {
@@ -472,5 +475,13 @@ h2 {
     .text-h5 {
         font-size: 1.3rem;
     }
+}
+
+.hero-background {
+    background-image: url('/bouldering1.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    loading: lazy;
 }
 </style>
