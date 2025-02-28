@@ -6,10 +6,10 @@
                     class="d-flex align-center justify-center"
                     style="background: url('/bouldering1.webp') center/cover no-repeat; height: 70vh; background-color: grey;"
                     >
-                    <v-card class="mx-auto pa-6" width="800" elevation="0" style="background-color: white;">
+                    <v-card class="mx-auto pa-6" width="800" max-width="95%" elevation="0" style="background-color: white;">
                         <div class="text-center" >
-                        <h1 class="primary-text mb-6">Velkommen til Falster Klatreklub</h1>
-                        <p class="primary-text text-body-1" style="white-space: pre-line; color: black;">
+                        <h1 class="primary-text mb-6 responsive-title">Velkommen til Falster Klatreklub</h1>
+                        <p class="primary-text text-body-1 responsive-text" style="white-space: pre-line; color: black;">
                             Vi er en lille, hyggelig klub med plads til alle – uanset om du er nybegynder eller erfaren klatrer.
 
                             For kun 500 kr. om året kan du blive medlem og få fri adgang. <br>
@@ -24,10 +24,10 @@
                 </v-col>
             </v-row>
             <v-row justify="center" class="mt-8" style="max-width: 1000px; margin: 0 auto;">
-                <v-col cols="12" md="5">
-                    <v-card class="mx-auto pa-3 info-card" width="400" elevation="0" style="background: linear-gradient(135deg, #f0fff4, #d4edda);" rounded="lg">
+                <v-col cols="12" md="6" class="mb-4">
+                    <v-card class="mx-auto pa-3 info-card" max-width="400" width="100%" elevation="0" style="background: linear-gradient(135deg, #f0fff4, #d4edda);" rounded="lg">
                         <div class="text-center h-100 d-flex flex-column">
-                            <h2 class="mb-4" style="color: black; font-weight: bold;">Klatretider</h2>
+                            <h2 class="mb-2" style="color: black; font-weight: bold;">Klatretider</h2>
                             <div class="climbing-schedule flex-grow-1">
                                 <div class="time-slot mb-2">
                                     <h3 class="day-header">Tirsdage</h3>
@@ -54,12 +54,13 @@
                         </div>
                     </v-card>
                 </v-col>
-                <v-col cols="12" md="5">
+                <v-col cols="12" md="6" class="mb-4">
                     <v-hover v-slot="{ isHovering, props }">
                         <v-card 
                             class="mx-auto pa-4 position-relative transition-transform info-card" 
                             :class="{ 'scale-card': isHovering }"
-                            width="400" 
+                            max-width="400"
+                            width="100%" 
                             elevation="0" 
                             rounded="lg" 
                             v-bind="props"
@@ -295,7 +296,6 @@ const contactInfo = [
 
 .home-container {
     min-height: 80vh;
-    min-width: 100vw;
     font-family: 'Open Sans', sans-serif;
     background-color: white;
     margin-bottom: 10px;
@@ -409,7 +409,8 @@ h2 {
 }
 
 .info-card {
-    height: 260px;
+    min-height: 260px;
+    height: auto;
     display: flex;
     flex-direction: column;
 }
@@ -418,5 +419,55 @@ h2 {
     text-align: left;
     padding: 0 8px;
     height: 100%;
+}
+
+.responsive-title {
+    font-size: 2.5rem;
+}
+
+.responsive-text {
+    font-size: 1rem;
+}
+
+@media (max-width: 960px) {
+    .responsive-title {
+        font-size: 2rem;
+    }
+    
+    .responsive-text {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-section {
+        height: 50vh;
+    }
+    
+    .responsive-title {
+        font-size: 1.8rem;
+    }
+    
+    .responsive-text {
+        font-size: 0.9rem;
+    }
+
+    .v-form {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    .responsive-title {
+        font-size: 1.5rem;
+    }
+    
+    h2 {
+        font-size: 1.4rem;
+    }
+    
+    .text-h5 {
+        font-size: 1.3rem;
+    }
 }
 </style>
