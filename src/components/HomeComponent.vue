@@ -252,7 +252,7 @@ const formData = ref({
 const loading = ref(false);
 const success = ref(false);
 const error = ref(false);
-const formspreeUrl = ref("https://formspree.io/f/movjozqr");
+const formspreeUrl = ref("https://formspree.io/f/mvgzevjk");
 
 const scrollToSection = (sectionId) => {
   const element = document.getElementById(sectionId);
