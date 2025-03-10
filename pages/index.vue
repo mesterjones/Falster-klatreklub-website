@@ -3,13 +3,23 @@
         <section id="home">
             <v-row>
                 <v-col
-                    class="d-flex align-center justify-center hero-background"
+                    class="d-flex align-center justify-center position-relative"
                     :style="{
                         'background-color': 'grey',
                         'height': '70vh'
                     }"
-                    >
-                    <v-card class="mx-auto pa-6" width="800" max-width="95%" elevation="0" style="background-color: white;">
+                >
+                    <!-- Background image -->
+                    <div class="hero-background-container">
+                        <img 
+                            src="/bouldering1.webp" 
+                            alt="Hero background"
+                            class="hero-background-image"
+                            fetchpriority="high"
+                        />
+                    </div>
+                    
+                    <v-card class="mx-auto pa-6" width="800" max-width="95%" elevation="0" style="background-color: white; position: relative; z-index: 2;">
                         <div class="text-center" >
                         <h1 class="primary-text mb-6 responsive-title">Velkommen til Falster Klatreklub</h1>
                         <p class="primary-text text-body-1 responsive-text" style="white-space: pre-line; color: black;">
@@ -19,7 +29,7 @@
                         </p>
                         <v-btn 
                         color="black"
-                        @click="$router.push({ name: 'BecomeMember' })"
+                        @click="$router.push('/bliv-medlem')"
                         class="primary-text mt-4"
                         aria-label="Bliv medlem">Bliv medlem</v-btn>
                         </div>
@@ -128,19 +138,6 @@
 
                         Lyder det som noget for dig, eller har du spørgsmål så kan vi kontaktes via formularen herunder. Du kan også besøge os på Facebook lige her: <a href="https://www.facebook.com/Falsterklatre" target="_blank" rel="noopener noreferrer"><v-icon icon="mdi-facebook" color="blue"></v-icon></a>
                     </p>
-
-                    <v-row>
-                            <v-col cols="12" md="6"class="mx-auto">
-                                <v-img 
-                                    class="pt-6" 
-                                    src="boulderinggreb.webp" 
-                                    aspect-ratio="1.2"
-                                    width="500"
-                                    contain 
-                                    alt="Boulderinggreb"
-                                ></v-img>
-                            </v-col>
-                    </v-row>
                 </v-col>
             </v-row>
         </section>
@@ -241,8 +238,50 @@
 </template>
 
 <script setup>
-
 import { ref } from 'vue';
+// Remove incorrect import
+// import { useSeoMeta } from '@vueuse/core';
+
+// Add SEO metadata for the homepage
+useSeoMeta({
+  title: 'Falster Klatreklub - Klatring for alle i Nykøbing Falster',
+  ogTitle: 'Falster Klatreklub - Klatring for alle i Nykøbing Falster',
+  description: 'Falster Klatreklub tilbyder klatring for alle aldre og niveauer. Vi tilbyder bouldering og rebklatring.',
+  ogDescription: 'Falster Klatreklub tilbyder klatring for alle aldre og niveauer. Vi tilbyder bouldering og rebklatring.',
+  ogImage: 'https://falster-klatreklub.dk/bouldering1.webp',
+  twitterCard: 'summary_large_image',
+})
+
+// Add structured data (JSON-LD) for better SEO
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Klatrecenter',
+        name: 'Falster Klatreklub',
+        description: 'Falster Klatreklub tilbyder klatring for alle aldre og niveauer. Bliv medlem og få adgang til vores klatrefaciliteter for kun 500 kr. om året.',
+        url: 'https://falster-klatreklub.dk',
+        image: 'https://falster-klatreklub.dk/bouldering1.webp',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: 'Industrivej 10',
+          addressLocality: 'Nykøbing F',
+          postalCode: '4800',
+          addressCountry: 'DK'
+        },
+        openingHours: [
+          'Tu 17:00-21:00',
+          'Th 18:00-21:00',
+          'Su 10:00-14:00'
+        ],
+        priceRange: '500 DKK per year',
+        telephone: '+4531981742'
+      })
+    }
+  ]
+})
 
 const formData = ref({
   name: "",
@@ -305,6 +344,25 @@ const contactInfo = [
     font-family: 'Open Sans', sans-serif;
     background-color: white;
     margin-bottom: 10px;
+}
+
+.hero-background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 .about-container {
@@ -415,7 +473,7 @@ h2 {
 }
 
 .info-card {
-    min-height: 260px;
+    min-height: 280px;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -446,8 +504,9 @@ h2 {
 }
 
 @media (max-width: 600px) {
-    .hero-background {
-        background-image: url('/bouldering1small.jpg');
+    .hero-background-container {
+        /* display: none; */ /* Remove this line */
+        /* Keep the background visible on mobile */
     }
     
     .responsive-title {
@@ -475,13 +534,5 @@ h2 {
     .text-h5 {
         font-size: 1.3rem;
     }
-}
-
-.hero-background {
-    background-image: url('/bouldering1.webp');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    loading: lazy;
 }
 </style>

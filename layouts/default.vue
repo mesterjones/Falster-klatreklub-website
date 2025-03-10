@@ -2,11 +2,11 @@
   <v-app>
     <NavBar />
     <v-main>
-      <router-view></router-view>
+      <slot />
     </v-main>
   </v-app>
 </template>
 
 <script setup>
-import NavBar from './components/NavBar.vue';
-</script>
+import NavBar from '~/components/NavBar.vue';
+</script> 

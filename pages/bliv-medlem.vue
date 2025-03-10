@@ -95,6 +95,7 @@
 
 <script setup>
 import { ref } from 'vue';
+// useHead is auto-imported by Nuxt, no need to import it explicitly
 
 const formData = ref({
   name: "",
@@ -105,6 +106,16 @@ const loading = ref(false);
 const success = ref(false);
 const error = ref(false);
 const formspreeUrl = ref("https://formspree.io/f/mvgzevjk");
+
+// Add SEO metadata for the membership page
+useHead({
+  title: 'Bliv Medlem - Falster Klatreklub',
+  meta: [
+    { name: 'description', content: 'Bliv medlem af Falster Klatreklub for kun 500 kr. om året og få adgang til vores klatrefaciliteter. Udfyld formularen for at komme i gang.' },
+    { property: 'og:title', content: 'Bliv Medlem - Falster Klatreklub' },
+    { property: 'og:description', content: 'Bliv medlem af Falster Klatreklub for kun 500 kr. om året og få adgang til vores klatrefaciliteter. Udfyld formularen for at komme i gang.' }
+  ]
+});
 
 const submitForm = async () => {
   loading.value = true;

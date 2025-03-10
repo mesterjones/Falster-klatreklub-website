@@ -7,10 +7,18 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Dependency directories
 node_modules
 dist
 dist-ssr
 *.local
+
+# Nuxt.js build / generate output
+.nuxt
+.output
+.nitro
+.cache
+.env
 
 # Editor directories and files
 .vscode/*
